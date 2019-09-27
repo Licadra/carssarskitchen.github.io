@@ -33,11 +33,31 @@
 		<link rel="manifest" href="img/favicon/manifest.json">
     
     <style>
+
     body, html {
       height: 100%;
       margin:auto;
       padding:0;
       }
+
+
+ #example {
+  background-color: #333;
+  height: 600px;
+  height: 600px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  resize: both;
+  position: relative;
+  z-index: 1;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
 
       .parallax-image-1 {
 
@@ -153,7 +173,7 @@
         }
 
 
-div.img {
+        div.img {
     border: 1px solid #ccc;
 }
 
@@ -219,6 +239,56 @@ div.desc {
             display: block!important;
           }
       }
+
+
+  #photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;  
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+
 
 
 
@@ -315,19 +385,11 @@ div.desc {
     <div id="Location" class="parallax" style="margin: auto;height: auto;width: auto;background-color: transparent">
 
      <section id="location" class="parallax" style="margin: auto;height: auto;width: auto;background-color: transparent">
-      
-       <ul style="margin: auto; float: left; height: auto;width: auto;background-color: transparent">
-         <section class="image-square left" style="margin: auto;height: auto;width: 100%;background-color: transparent">
-          <div class="col-md-6 p0 image" style="margin: auto;height: auto;width: 100%;background-color: transparent">
-            
-           <div style="margin: auto;height: 100%;width: auto; background-color: transparent">
-             <iframe style="float: left; margin: auto;background-color: transparent" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1610.4725361518804!2d-115.14058106420886!3d36.167891226853264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1488346291138" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>         
-           </div>
-            
-          </div>
-         </section>
-       </ul>
 
+        <div id="example" class="image-square left col-md-6 p0 image" style="margin: auto;background-color: transparent">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1610.4725361518804!2d-115.14058106420886!3d36.167891226853264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1488346291138"></iframe>
+        </div>
+      
 
        <ul style="margin: auto;height: auto;width: auto; float: right; background-color: rosybrown">
         <section class="image-square right" style="margin: auto;height: auto;width: auto; background-color: transparent">
@@ -378,6 +440,60 @@ div.desc {
 
 
 
+
+    <section id="images" class="navbar-default pt240 pb240 image-bg background-image-holder parallax responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
+      
+     <ul class="responsive" style="float: right; list-style-type: none;margin: auto;height: 100%;width: 100%; background-color: transparent">
+ 
+        <li  class="navbar-default background-image-holder responsive" style="margin: auto;height: 100%;width: auto;background-color: transparent">
+          <a class="navbar-default navbar-header navbar-brand responsive" href="img/index/gallery/just_the_tip_credit_chris_wessling_las_vegas_tn.jpg" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+            <img class="background-image" src="img/index/gallery/just_the_tip_credit_chris_wessling_las_vegas_tn.jpg" alt="john e carson hotel las vegas" width="100%" height="236px">
+          </a>
+        </li>
+
+        <li class="navbar-default background-image-holder responsive" style="margin: auto;height: 100%;width: auto;background-color: transparent">
+          <a class="navbar-default navbar-header navbar-brand responsive" href="img/index/gallery/john_e_carson_hotel_tn.jpg" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+            <img class="background-image" src="img/index/gallery/carson_kitchen_signage_tn.jpg" alt="john e carson hotel las vegas"  width="100%" height="236px">
+          </a>
+        </li>
+
+        <li  class="navbar-default background-image-holder responsive" style="margin: auto;height: 100%;width: auto;background-color: transparent">
+          <a class="navbar-default navbar-header navbar-brand responsive" href="img/index/gallery/alabama_chicken_credit_chris_wessling_las_vegas_tn.jpg" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+            <img class="background-image" src="img/index/gallery/alabama_chicken_credit_chris_wessling_las_vegas_tn.jpg" alt="john e carson hotel las vegas" width="100%" height="236px">
+          </a>
+        </li>
+
+     </ul>
+
+     <ul  class="responsive" style="float: right; list-style-type: none;margin: auto;height: 100%;width: 100%; background-color: transparent">
+         
+        <li  class="navbar-default background-image-holder responsive" style="margin: auto;height: 100%;width: auto;background-color: transparent">
+          <a class="navbar-default navbar-header navbar-brand responsive" href="img/index/gallery/carson_kitchen_bar_chris_wessling_tn.jpg" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+            <img class="background-image" src="img/index/gallery/carson_kitchen_bar_chris_wessling_tn.jpg" alt="john e carson hotel las vegas"  width="100%" height="236px">
+          </a>
+        </li>
+
+        <li  class="navbar-default background-image-holder responsive" style="margin: auto;height: 100%;width: auto;background-color: transparent">
+          <a class="navbar-default navbar-header navbar-brand responsive" href="img/index/gallery/john_e_carson_hotel_tn.jpg" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+            <img class="background-image" src="img/index/gallery/john_e_carson_hotel_tn.jpg" alt="john e carson hotel las vegas"  width="100%" height="236px">
+          </a>
+        </li>
+
+        <li  class="navbar-default background-image-holder responsive" style="margin: auto;height: 100%;width: auto;background-color: transparent">
+          <a class="navbar-default navbar-header navbar-brand responsive" href="img/index/gallery/broccoli_crunch_credit_chris_wessling_tn.jpg" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+            <img class="background-image" src="img/index/gallery/broccoli_crunch_credit_chris_wessling_tn.jpg" alt="john e carson hotel las vegas"  width="100%" height="236px">
+          </a>
+        </li>
+             
+     </ul>
+  
+    </section>
+  
+
+
+
+
+  <!--   
    <div id="Images" class=" parallax "  style="margin: auto;height: auto;width: 100%;background-color: transparent">
    
     <section id="images" class="parallax"  style="margin: auto;height: auto;width: 100%;background-color: transparent">
@@ -429,82 +545,79 @@ div.desc {
     </section>
 
    </div>
-
-
+  -->
+      
 
 
    <section class="parallax "></section>
 
 
 
+   <section id="about" class="navbar-default pt240 pb240 image-bg background-image-holder parallax responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
 
-   
-    <div id="about" class="parallax "  style="margin: auto;height: auto;width: auto;background-color: transparent">
-     
-      <section id="about" class="parallax" style="margin: auto;height: auto;width: 100%;background-color: transparent">
-      <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
-         <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
-           <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
-             <h3 class="uppercase mb16">Urban Neighborhood Dining</h3>
-           </a>
-         </li>
-      </ul>
+    <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
+      <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
+        <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+          <h3 class="uppercase mb16">Urban Neighborhood Dining</h3>
+        </a>
+      </li>
+   </ul>
 
-      <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
-         <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
-           <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
-             <h6 class="mb8 uppercase">Downtown Las Vegas</h6><br>
-           </a>
-         </li>
-      </ul>
+   <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
+      <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
+        <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+          <h6 class="mb8 uppercase">Downtown Las Vegas</h6><br>
+        </a>
+      </li>
+   </ul>
 
-      <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
- 
-         <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
-           <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
-             <p class="lead">
-               Opening in 2014, Carson Kitchen was the creation of Las Vegas' hometown favorite chef Kerry Simon and chef/restaurateur Cory Harwell. The plan, to develop the first urban casual eatery inside the repurposed mid-century John E. Carson Hotel—a skeleton of Downtown Las Vegas' yesteryears and now home to an eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut &amp; coffee bar and Carson Kitchen's playful interpretations of American comfort food.
-             </p>            
-           </a>
-         </li>
-      </ul>
+   <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
 
-      <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
-         <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
-           <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
-             <p class="lead">
-               The renovated space provides multiple atmospheres to indulge, including a swanky bar, the open kitchen expo counter, a community table and the outdoor rooftop patio and bar (yes, that's two bars to choose from). Guests can also take in a cocktail and relax in the now preserved 1950's hotel courtyard, fully outfitted with a lava rock fire pit. 
-             </p>            
-           </a>
-         </li>
-      </ul>
+      <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
+        <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+          <p class="lead">
+            Opening in 2014, Carson Kitchen was the creation of Las Vegas' hometown favorite chef Kerry Simon and chef/restaurateur Cory Harwell. The plan, to develop the first urban casual eatery inside the repurposed mid-century John E. Carson Hotel—a skeleton of Downtown Las Vegas' yesteryears and now home to an eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut &amp; coffee bar and Carson Kitchen's playful interpretations of American comfort food.
+          </p>            
+        </a>
+      </li>
+   </ul>
 
-      <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
-         <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
-           <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
-             <p class="lead">
-               If you're looking for an alternative to The Strip's offerings and simply want to get back to basics, then the creative comfort of Carson Kitchen will bring you back to a time when your grandparents visited Las Vegas.
-				  	 </p>            
-           </a>
-         </li>
-      </ul>
+   <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
+      <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
+        <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+          <p class="lead">
+            The renovated space provides multiple atmospheres to indulge, including a swanky bar, the open kitchen expo counter, a community table and the outdoor rooftop patio and bar (yes, that's two bars to choose from). Guests can also take in a cocktail and relax in the now preserved 1950's hotel courtyard, fully outfitted with a lava rock fire pit. 
+          </p>            
+        </a>
+      </li>
+   </ul>
 
-      <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
-         <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
-           <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
-             <h4>
-               <a href="https://www.facebook.com/CarsonKitchen/"><i class="ti-facebook"></i></a> <a href="https://twitter.com/CarsonKitchen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ti-twitter-alt"></i></a> <a href="https://www.instagram.com/carsonkitchen/?hl=en"><i class="ti-instagram"></i></a>
-				 	   </h4>           
-           </a>
-         </li>
-      </ul>
-     </section>
+   <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
+      <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
+        <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+          <p class="lead">
+            If you're looking for an alternative to The Strip's offerings and simply want to get back to basics, then the creative comfort of Carson Kitchen will bring you back to a time when your grandparents visited Las Vegas.
+          </p>            
+        </a>
+      </li>
+   </ul>
 
-    </div>
+   <ul class=" responsive" style="float: left;list-style-type: none;margin: auto;height: auto;width: auto; background-color: darkgray">
+      <li class="navbar-default background-image-holder responsive" style="margin: auto;height: auto;width: auto;background-color: transparent">
+        <a class="navbar-default navbar-header navbar-brand responsive" target="_blank" style="margin: auto;height: auto;width: auto;background-color: transparent" data-lightbox="true">
+          <h4>
+            <a href="https://www.facebook.com/CarsonKitchen/"><i class="ti-facebook"></i></a> <a href="https://twitter.com/CarsonKitchen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ti-twitter-alt"></i></a> <a href="https://www.instagram.com/carsonkitchen/?hl=en"><i class="ti-instagram"></i></a>
+           </h4>           
+        </a>
+      </li>
+   </ul>
+
+
+   </section>
 
 
 
-     <section class="parallax "></section>
+   <section class="parallax "></section>
 
  
 
@@ -623,7 +736,7 @@ div.desc {
 
 
 
-      <footer id="Footer" class="parallax" style="margin: auto;height: auto;width: auto;background-color: transparent">
+     <footer id="Footer" class="parallax" style="margin: auto;height: auto;width: auto;background-color: transparent">
 
         <div>
 
@@ -644,61 +757,49 @@ div.desc {
                <ul class="  responsive" style="list-style-type: none;margin: auto;height: auto;width: 100%; background-color:transparent"> 
                  
                  <li class=" row">
-                  <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://www.elevenhospitalitygroup.com" target="_blank">
-                    ElevenHospitalityGroup.com
-                  </a>
-                  <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="mailto:carsonkitchen@kirvindoak.com" target="_blank">
-                    Press Contact: carsonkitchen@kirvindoak.com
-                  </a>
+                    <a class=" background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" target="_blank">
+                     <span class="sub">
+                        <a class=" background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://www.elevenhospitalitygroup.com" target="_blank">
+                          <h6 class=" uppercase mb16">  ElevenHospitalityGroup.com</h6>
+                        </a>
+                        <a class=" background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="mailto:carsonkitchen@kirvindoak.com" target="_blank">
+                          <h6 class=" uppercase mb16"> Press Contact: carsonkitchen@kirvindoak.com</h6>
+                        </a> 
+                        <a class=" background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="mailto:emjye@mail.com" target="_blank">
+                          <h6 class=" uppercase mb16"> Design: Emmys, LLC</h6>
+                        </a>                     
+                     </span>
+                     <br>
+                    </a>
                  </li>
+               </ul>
 
-                 <li class=" row">
-                  <a class=" background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="mailto:emjye@mail.com" target="_blank">
-                   <span class="sub">
-                      <a class=" background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="mailto:emjye@mail.com" target="_blank">
-                        <h6 class=" uppercase mb16"> Design: Emmys, LLC</h6>
-                      </a>                     
-                   </span>
-                   <br>
-                  </a>
-                 </li>
-              
+               <ul class="  responsive" style="list-style-type: none;margin: auto;height: auto;width: 100%; background-color:transparent"> 
+
+                  <li class="row">
+                    <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://www.facebook.com/CarsonKitchen/">
+                      <i class="ti-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="row">
+                    <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://twitter.com/CarsonKitchen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                      <i class="ti-twitter-alt"></i>
+                    </a>
+                  </li>
+                  <li class="row">
+                    <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://www.instagram.com/carsonkitchen/?hl=en">
+                      <i class="ti-instagram"></i>
+                    </a>
+                  </li>
+                  
                </ul>
    
              </section>
 
             </div>
 
-
           </section>
 
-
-
-          <section id="" style="margin: auto;height: auto;width: auto;background-color: transparent">
-
-           <ul class="  responsive" style="list-style-type: none;margin: auto;height: auto;width: 100%; background-color:transparent"> 
-
-              <li class="row">
-                <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://www.facebook.com/CarsonKitchen/">
-                  <i class="ti-facebook"></i>
-                </a>
-              </li>
-              <li class="row">
-                <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://twitter.com/CarsonKitchen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                  <i class="ti-twitter-alt"></i>
-                </a>
-              </li>
-              <li class="row">
-                <a class="background col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center" href="https://www.instagram.com/carsonkitchen/?hl=en">
-                  <i class="ti-instagram"></i>
-                </a>
-              </li>
-              
-           </ul>
- 
-          </section>
-
-           
 
         </div>
 
